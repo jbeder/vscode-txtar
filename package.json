@@ -1,0 +1,48 @@
+{
+  "name": "txtar",
+  "displayName": "txtar",
+  "description": "Highlighting for txtar archives: the comment, each file's header, and each file in its own language.",
+  "publisher": "local",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "txtar",
+        "aliases": [
+          "txtar"
+        ],
+        "extensions": [
+          ".txtar"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "txtar",
+        "scopeName": "source.txtar",
+        "path": "./syntaxes/txtar.tmLanguage.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.json": "json",
+          "meta.embedded.block.go": "go",
+          "meta.embedded.block.markdown": "markdown",
+          "meta.embedded.block.yaml": "yaml",
+          "meta.embedded.block.shellscript": "shellscript",
+          "meta.embedded.block.javascript": "javascript",
+          "meta.embedded.block.typescript": "typescript",
+          "meta.embedded.block.python": "python",
+          "meta.embedded.block.html": "html",
+          "meta.embedded.block.css": "css",
+          "meta.embedded.block.xml": "xml",
+          "meta.embedded.block.sql": "sql",
+          "meta.embedded.block.swift": "swift"
+        }
+      }
+    ]
+  }
+}

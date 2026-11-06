@@ -1,0 +1,352 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "txtar",
+  "scopeName": "source.txtar",
+  "patterns": [
+    {
+      "include": "#section"
+    },
+    {
+      "begin": "^(?!-- .+ --$)",
+      "while": "^(?!-- .+ --$)",
+      "name": "comment.block.txtar"
+    }
+  ],
+  "repository": {
+    "section": {
+      "patterns": [
+        {
+          "begin": "^(--) (.+?\\.(?:json)) (--)$",
+          "beginCaptures": {
+            "0": {
+              "name": "markup.heading.txtar"
+            },
+            "1": {
+              "name": "punctuation.definition.heading.txtar"
+            },
+            "2": {
+              "name": "entity.name.section.txtar"
+            },
+            "3": {
+              "name": "punctuation.definition.heading.txtar"
+            }
+          },
+          "while": "^(?!-- .+ --$)",
+          "contentName": "meta.embedded.block.json",
+          "patterns": [
+            {
+              "include": "source.json"
+            }
+          ]
+        },
+        {
+          "begin": "^(--) (.+?\\.(?:go)) (--)$",
+          "beginCaptures": {
+            "0": {
+              "name": "markup.heading.txtar"
+            },
+            "1": {
+              "name": "punctuation.definition.heading.txtar"
+            },
+            "2": {
+              "name": "entity.name.section.txtar"
+            },
+            "3": {
+              "name": "punctuation.definition.heading.txtar"
+            }
+          },
+          "while": "^(?!-- .+ --$)",
+          "contentName": "meta.embedded.block.go",
+          "patterns": [
+            {
+              "include": "source.go"
+            }
+          ]
+        },
+        {
+          "begin": "^(--) (.+?\\.(?:md)) (--)$",
+          "beginCaptures": {
+            "0": {
+              "name": "markup.heading.txtar"
+            },
+            "1": {
+              "name": "punctuation.definition.heading.txtar"
+            },
+            "2": {
+              "name": "entity.name.section.txtar"
+            },
+            "3": {
+              "name": "punctuation.definition.heading.txtar"
+            }
+          },
+          "while": "^(?!-- .+ --$)",
+          "contentName": "meta.embedded.block.markdown",
+          "patterns": [
+            {
+              "include": "text.html.markdown"
+            }
+          ]
+        },
+        {
+          "begin": "^(--) (.+?\\.(?:yaml|yml)) (--)$",
+          "beginCaptures": {
+            "0": {
+              "name": "markup.heading.txtar"
+            },
+            "1": {
+              "name": "punctuation.definition.heading.txtar"
+            },
+            "2": {
+              "name": "entity.name.section.txtar"
+            },
+            "3": {
+              "name": "punctuation.definition.heading.txtar"
+            }
+          },
+          "while": "^(?!-- .+ --$)",
+          "contentName": "meta.embedded.block.yaml",
+          "patterns": [
+            {
+              "include": "source.yaml"
+            }
+          ]
+        },
+        {
+          "begin": "^(--) (.+?\\.(?:sh|bash)) (--)$",
+          "beginCaptures": {
+            "0": {
+              "name": "markup.heading.txtar"
+            },
+            "1": {
+              "name": "punctuation.definition.heading.txtar"
+            },
+            "2": {
+              "name": "entity.name.section.txtar"
+            },
+            "3": {
+              "name": "punctuation.definition.heading.txtar"
+            }
+          },
+          "while": "^(?!-- .+ --$)",
+          "contentName": "meta.embedded.block.shellscript",
+          "patterns": [
+            {
+              "include": "source.shell"
+            }
+          ]
+        },
+        {
+          "begin": "^(--) (.+?\\.(?:js)) (--)$",
+          "beginCaptures": {
+            "0": {
+              "name": "markup.heading.txtar"
+            },
+            "1": {
+              "name": "punctuation.definition.heading.txtar"
+            },
+            "2": {
+              "name": "entity.name.section.txtar"
+            },
+            "3": {
+              "name": "punctuation.definition.heading.txtar"
+            }
+          },
+          "while": "^(?!-- .+ --$)",
+          "contentName": "meta.embedded.block.javascript",
+          "patterns": [
+            {
+              "include": "source.js"
+            }
+          ]
+        },
+        {
+          "begin": "^(--) (.+?\\.(?:ts)) (--)$",
+          "beginCaptures": {
+            "0": {
+              "name": "markup.heading.txtar"
+            },
+            "1": {
+              "name": "punctuation.definition.heading.txtar"
+            },
+            "2": {
+              "name": "entity.name.section.txtar"
+            },
+            "3": {
+              "name": "punctuation.definition.heading.txtar"
+            }
+          },
+          "while": "^(?!-- .+ --$)",
+          "contentName": "meta.embedded.block.typescript",
+          "patterns": [
+            {
+              "include": "source.ts"
+            }
+          ]
+        },
+        {
+          "begin": "^(--) (.+?\\.(?:py)) (--)$",
+          "beginCaptures": {
+            "0": {
+              "name": "markup.heading.txtar"
+            },
+            "1": {
+              "name": "punctuation.definition.heading.txtar"
+            },
+            "2": {
+              "name": "entity.name.section.txtar"
+            },
+            "3": {
+              "name": "punctuation.definition.heading.txtar"
+            }
+          },
+          "while": "^(?!-- .+ --$)",
+          "contentName": "meta.embedded.block.python",
+          "patterns": [
+            {
+              "include": "source.python"
+            }
+          ]
+        },
+        {
+          "begin": "^(--) (.+?\\.(?:html)) (--)$",
+          "beginCaptures": {
+            "0": {
+              "name": "markup.heading.txtar"
+            },
+            "1": {
+              "name": "punctuation.definition.heading.txtar"
+            },
+            "2": {
+              "name": "entity.name.section.txtar"
+            },
+            "3": {
+              "name": "punctuation.definition.heading.txtar"
+            }
+          },
+          "while": "^(?!-- .+ --$)",
+          "contentName": "meta.embedded.block.html",
+          "patterns": [
+            {
+              "include": "text.html.basic"
+            }
+          ]
+        },
+        {
+          "begin": "^(--) (.+?\\.(?:css)) (--)$",
+          "beginCaptures": {
+            "0": {
+              "name": "markup.heading.txtar"
+            },
+            "1": {
+              "name": "punctuation.definition.heading.txtar"
+            },
+            "2": {
+              "name": "entity.name.section.txtar"
+            },
+            "3": {
+              "name": "punctuation.definition.heading.txtar"
+            }
+          },
+          "while": "^(?!-- .+ --$)",
+          "contentName": "meta.embedded.block.css",
+          "patterns": [
+            {
+              "include": "source.css"
+            }
+          ]
+        },
+        {
+          "begin": "^(--) (.+?\\.(?:xml)) (--)$",
+          "beginCaptures": {
+            "0": {
+              "name": "markup.heading.txtar"
+            },
+            "1": {
+              "name": "punctuation.definition.heading.txtar"
+            },
+            "2": {
+              "name": "entity.name.section.txtar"
+            },
+            "3": {
+              "name": "punctuation.definition.heading.txtar"
+            }
+          },
+          "while": "^(?!-- .+ --$)",
+          "contentName": "meta.embedded.block.xml",
+          "patterns": [
+            {
+              "include": "text.xml"
+            }
+          ]
+        },
+        {
+          "begin": "^(--) (.+?\\.(?:sql)) (--)$",
+          "beginCaptures": {
+            "0": {
+              "name": "markup.heading.txtar"
+            },
+            "1": {
+              "name": "punctuation.definition.heading.txtar"
+            },
+            "2": {
+              "name": "entity.name.section.txtar"
+            },
+            "3": {
+              "name": "punctuation.definition.heading.txtar"
+            }
+          },
+          "while": "^(?!-- .+ --$)",
+          "contentName": "meta.embedded.block.sql",
+          "patterns": [
+            {
+              "include": "source.sql"
+            }
+          ]
+        },
+        {
+          "begin": "^(--) (.+?\\.(?:swift)) (--)$",
+          "beginCaptures": {
+            "0": {
+              "name": "markup.heading.txtar"
+            },
+            "1": {
+              "name": "punctuation.definition.heading.txtar"
+            },
+            "2": {
+              "name": "entity.name.section.txtar"
+            },
+            "3": {
+              "name": "punctuation.definition.heading.txtar"
+            }
+          },
+          "while": "^(?!-- .+ --$)",
+          "contentName": "meta.embedded.block.swift",
+          "patterns": [
+            {
+              "include": "source.swift"
+            }
+          ]
+        },
+        {
+          "begin": "^(--) (.+?) (--)$",
+          "beginCaptures": {
+            "0": {
+              "name": "markup.heading.txtar"
+            },
+            "1": {
+              "name": "punctuation.definition.heading.txtar"
+            },
+            "2": {
+              "name": "entity.name.section.txtar"
+            },
+            "3": {
+              "name": "punctuation.definition.heading.txtar"
+            }
+          },
+          "while": "^(?!-- .+ --$)",
+          "contentName": "meta.embedded.block.txtar.plain"
+        }
+      ]
+    }
+  }
+}
